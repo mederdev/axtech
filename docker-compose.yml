@@ -1,0 +1,11 @@
+version: "1.0.0"
+
+services:
+  backend:
+    container_name: backend_service
+    build: .
+    env_file:
+      - .env
+    ports:
+      - ${PORT}:${PORT}
+    restart: unless-stopped
